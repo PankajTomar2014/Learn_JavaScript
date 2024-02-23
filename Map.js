@@ -26,3 +26,46 @@ contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
 contacts.delete("Raymond"); // false
 contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
+
+const myMap = new Map();
+const key1 = "name",
+  key2 = {},
+  key3 = function () {};
+
+myMap.set(key1, "my name is pankaj");
+myMap.set(key2, "this is blank obj");
+myMap.set(key3, "this is blank function");
+
+// Getting the values from a Map by using their key
+console.log(myMap.get(key1));
+console.log(myMap.get(key2));
+
+// Get the size of the Map
+console.log(myMap.size);
+
+// You can use loop using for..of to get keys and values
+for (let [key, value] of myMap) {
+  console.log(key, value);
+}
+
+// Get only keys
+for (let key of myMap.keys()) {
+  console.log("key is---", key);
+}
+
+// Get only values
+for (let value of myMap.values()) {
+  console.log("value is---", value);
+}
+
+// convert Map to Array;
+let myArray = Array.from(myMap);
+console.log("convert array is---", myArray);
+
+// convert Map keys to Array;
+let myKeysArray = Array.from(myMap.keys());
+console.log("convert keys array is---", myKeysArray);
+
+// convert Map values to Array;
+let myaValuesArray = Array.from(myMap.values());
+console.log("convert values array is---", myaValuesArray);
